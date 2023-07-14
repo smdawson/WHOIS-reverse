@@ -47,7 +47,7 @@ def check_balance(base_url):
         if content['reverse_whois_balance'] == 0:
             logging.error('Zero API queries left. Please recharge.')
             mode['reverse'] = False
-        elif content['reverse_whois_balance'] < 200:
+        elif content['reverse_whois_balance'] < 20:
             logging.warning('Reverse WHOIS lookup credits are getting low. Consider recharging.')
     else:
         logging.error('WHOIS lookup failed, {}'.format(content['status_reason']))
